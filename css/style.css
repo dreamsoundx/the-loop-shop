@@ -81,3 +81,29 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+
+.free-shiping {
+  background: #212121;
+}
+.free-shiping__content {
+  padding: 84px 0px 71px 0px;
+  text-align: center;
+}
+.free-shiping__title {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.free-shiping__title:not(:last-child) {
+  margin-bottom: 29px;
+}
+.free-shiping__selected-title {
+  font-weight: 700;
+}
+.free-shiping__text {
+  font-weight: 300;
+  font-size: 21px;
+  color: #fff;
+}
