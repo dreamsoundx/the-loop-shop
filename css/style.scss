@@ -1,0 +1,41 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic-ext');
+@import '_null';
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  line-height: 1;
+  background: #f9f6f1;;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*='__container'] {
+  margin: 0px auto;
+  max-width: 1140px;
+  padding: 0px 15px;
+}
+
+.header {
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+
+.footer {}
