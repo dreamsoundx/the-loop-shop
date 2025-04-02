@@ -98,6 +98,21 @@ h6 {
   margin: 0 auto;
   padding: 0 .9375rem
 }
+.button {
+  display: inline-flex;
+  padding: 1.0625rem 1.875rem;
+  color: #fff;
+  background-color: #d7b399;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color .3s ease 0s
+}
+.button--fw {
+  width: 100%
+}
 .menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -146,14 +161,31 @@ h6 {
   padding-bottom: .625rem;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  -webkit-column-gap: .3125rem;
+  -moz-column-gap: .3125rem;
+  column-gap: .3125rem
 }
 .header__logo {
   display: flex;
   align-items: center;
   -webkit-column-gap: 1.25rem;
   -moz-column-gap: 1.25rem;
-  column-gap: 1.25rem;
+  column-gap: 1.25rem
+}
+.header__image {
+  flex: 0 0 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.header__image img {
+  max-width: 100%;
+  max-height: 2.5rem
+}
+.header__title {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2083333333;
@@ -186,6 +218,69 @@ h6 {
   content: "";
   border: .5rem solid transparent;
   border-right: .9375rem solid #d7b399
+}
+.promo__content {
+  padding-top: 4.75rem;
+  padding-bottom: 8.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+.promo__body {
+  padding-top: 2.125rem;
+  flex: 0 1 50%
+}
+.promo__title {
+  font-size: 1.875rem;
+  line-height: 1.2333333333;
+  letter-spacing: .02em
+}
+.promo__title:not(:last-child) {
+  margin-bottom: 1.625rem
+}
+.promo__text {
+  font-size: 3.4375rem;
+  font-weight: 700;
+  line-height: 1.2181818182;
+  letter-spacing: .04em;
+  text-transform: uppercase
+}
+.promo__text:not(:last-child) {
+  margin-bottom: .6909090909em
+}
+.promo__button {
+  align-self: flex-start
+}
+.promo__image {
+  position: relative;
+  flex: 0 1 50%
+}
+.promo__image img {
+  max-width: 100%
+}
+.price {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  text-align: right;
+  text-transform: uppercase
+}
+.price__old {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2083333333;
+  letter-spacing: .05em;
+  text-decoration: line-through
+}
+.price__old:not(:last-child) {
+  margin-bottom: .7083333333em
+}
+.price__new {
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: 1.2142857143;
+  letter-spacing: .02em;
+  color: #d84033
 }
 .free-shiping {
   background: #212121
@@ -221,9 +316,9 @@ h6 {
 }
 @media (max-width:48em) {
   .menu__list {
-    -webkit-column-gap: .9375rem;
-    -moz-column-gap: .9375rem;
-    column-gap: .9375rem
+    -webkit-column-gap: .625rem;
+    -moz-column-gap: .625rem;
+    column-gap: .625rem
   }
 }
 @media (max-width:47.99875em) {
@@ -300,18 +395,23 @@ h6 {
   }
 }
 @media (min-width:48em)and (max-width:120em) {
-  @supports ((-moz-column-gap:clamp(0.9375rem ,-0.6041666667rem + 3.2118055556vw ,3.25rem)) or (column-gap:clamp(0.9375rem ,-0.6041666667rem + 3.2118055556vw ,3.25rem))) {
+  @supports ((-moz-column-gap:clamp(0.625rem ,-1.125rem + 3.6458333333vw ,3.25rem)) or (column-gap:clamp(0.625rem ,-1.125rem + 3.6458333333vw ,3.25rem))) {
     .menu__list {
-      -webkit-column-gap: clamp(.9375rem ,-.6041666667rem + 3.2118055556vw ,3.25rem);
-      -moz-column-gap: clamp(.9375rem ,-.6041666667rem + 3.2118055556vw ,3.25rem);
-      column-gap: clamp(.9375rem ,-.6041666667rem + 3.2118055556vw ,3.25rem)
+      -webkit-column-gap: clamp(.625rem ,-1.125rem + 3.6458333333vw ,3.25rem);
+      -moz-column-gap: clamp(.625rem ,-1.125rem + 3.6458333333vw ,3.25rem);
+      column-gap: clamp(.625rem ,-1.125rem + 3.6458333333vw ,3.25rem)
     }
   }
-  @supports not ((-moz-column-gap:clamp(0.9375rem ,-0.6041666667rem + 3.2118055556vw ,3.25rem)) or (column-gap:clamp(0.9375rem ,-0.6041666667rem + 3.2118055556vw ,3.25rem))) {
+  @supports not ((-moz-column-gap:clamp(0.625rem ,-1.125rem + 3.6458333333vw ,3.25rem)) or (column-gap:clamp(0.625rem ,-1.125rem + 3.6458333333vw ,3.25rem))) {
     .menu__list {
-      -webkit-column-gap: calc(.9375rem + 2.3125*(100vw - 48rem)/ 72);
-      -moz-column-gap: calc(.9375rem + 2.3125*(100vw - 48rem)/ 72);
-      column-gap: calc(.9375rem + 2.3125*(100vw - 48rem)/ 72)
+      -webkit-column-gap: calc(.625rem + 2.625*(100vw - 48rem)/ 72);
+      -moz-column-gap: calc(.625rem + 2.625*(100vw - 48rem)/ 72);
+      column-gap: calc(.625rem + 2.625*(100vw - 48rem)/ 72)
     }
+  }
+}
+@media (any-hover:hover) {
+  .button:hover {
+    background-color: #9c816d
   }
 }

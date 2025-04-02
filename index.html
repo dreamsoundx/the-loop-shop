@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250401171428">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250402112317">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&_v=20250401171428" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&_v=20250402112317" rel="stylesheet" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,7 +32,12 @@
 						</ul>
 					</nav>
 				</div>
-				<a class="header__logo" href="#"><img src="img/logo.svg" alt="logo" />The Loop</a>
+				<a class="header__logo" href="#">
+					<div class="header__image">
+						<img src="img/logo.svg" alt="logo" />
+					</div>
+					<h1 class="header__title">The Loop</h1>
+				</a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
@@ -54,6 +59,24 @@
 		</header>
 
 		<main class="page">
+			<section class="promo">
+				<div class="promo__container">
+					<div class="promo__content">
+						<div class="promo__body">
+							<h2 class="promo__title">Зимняя распродажа</h2>
+							<p class="promo__text">Скидки до 90%</p>
+							<a class="promo__button button" href="#">Смотреть модели</a>
+						</div>
+						<div class="promo__image">
+							<img src="img/promo/image/promo-shoe.webp" alt="shoe" />
+							<div class="price">
+								<p class="price__old">9 900 ₽</p>
+								<p class="price__new">1 900 ₽</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="free-shiping">
 				<div class="free-shiping__container">
 					<div class="free-shiping__content">
@@ -71,7 +94,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250401171428"></script>
+	<script src="js/app.min.js?_v=20250402112317"></script>
 </body>
 
 </html>
