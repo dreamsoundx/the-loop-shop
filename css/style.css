@@ -113,6 +113,18 @@ h6 {
 .button--fw {
   width: 100%
 }
+.button_arrow {
+  -webkit-column-gap: .5625rem;
+  -moz-column-gap: .5625rem;
+  column-gap: .5625rem
+}
+.button_arrow::after {
+  content: "";
+  flex: 0 0 1.3125rem;
+  min-width: 1.3125rem;
+  height: .5rem;
+  background: url(../img/arrow.svg) 0 0 no-repeat
+}
 .menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -356,13 +368,101 @@ h6 {
   margin-top: 1.25rem;
   flex: 0 0 11.875rem;
   min-width: 11.875rem;
-  height: 10.6875rem
+  height: 10.6875rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center
 }
 .collection__image img {
+  max-width: 100%;
+  max-height: 100%
+}
+.new-models__content {
+  padding-top: 9.375rem;
+  padding-bottom: 9.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6.25rem
+}
+.new-models__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2222222222;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-align: center
+}
+.new-models__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.9375rem;
+  row-gap: 1.875rem
+}
+.new-models__item {
+  flex: 0 1 25%;
+  padding: 0 .9375rem
+}
+.new-models__button {
+  align-self: center;
+  align-items: center;
+  padding-left: 2.125rem;
+  padding-right: 2.125rem
+}
+.model {
+  padding: 1.5625rem 1.5625rem 1.5625rem 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5625rem;
+  align-items: center;
+  text-align: center;
+  position: relative
+}
+.model::after,
+.model::before {
+  position: absolute;
+  content: "";
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
+  height: 1.5625rem
+}
+.model::before {
+  top: 0;
+  left: 0;
+  background: url(../img/new-models/icons/decor-top.svg) 0 0 no-repeat
+}
+.model::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  background: url(../img/new-models/icons/decor-bottom.svg) 0 0 no-repeat
+}
+.model__image {
+  flex: 0 0 13.1875rem;
+  min-width: 12.8125rem;
+  height: 13.1875rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center
+}
+.model__image img {
+  max-width: 100%;
+  max-height: 100%
+}
+.model__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5625rem
+}
+.model__title {
+  font-weight: 600;
+  line-height: 1.2142857143;
+  max-width: 7rem
+}
+.model__price {
+  color: #d7b399;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2222222222;
+  text-transform: uppercase
 }
 @media (min-width:120em) {
   .menu__list {
