@@ -160,7 +160,8 @@ h6 {
   color: #212121;
   font-weight: 500;
   line-height: 1.2142857143;
-  letter-spacing: .03em
+  letter-spacing: .03em;
+  transition: color .3s ease 0s
 }
 .icon-menu {
   display: none
@@ -304,7 +305,8 @@ h6 {
   align-items: center;
   -webkit-column-gap: .3125rem;
   -moz-column-gap: .3125rem;
-  column-gap: .3125rem
+  column-gap: .3125rem;
+  transition: color .3s ease 0s
 }
 .menu-footer__link::before {
   font-size: 1rem;
@@ -515,7 +517,8 @@ h6 {
   row-gap: 1.5625rem;
   align-items: center;
   text-align: center;
-  position: relative
+  position: relative;
+  transition: box-shadow .3s ease 0s
 }
 .model::after,
 .model::before {
@@ -555,7 +558,8 @@ h6 {
 .model__title {
   font-weight: 600;
   line-height: 1.2142857143;
-  max-width: 7rem
+  max-width: 7rem;
+  transition: color .3s ease 0s
 }
 .model__price {
   color: #d7b399;
@@ -669,6 +673,18 @@ h6 {
 }
 @media (any-hover:hover) {
   .button:hover {
-    background-color: #9c816d
+    background-color: #f1cbb0
+  }
+  .menu__link:hover {
+    color: #d7b399
+  }
+  .menu-footer__link:hover {
+    color: #d7b399
+  }
+  .model:hover {
+    box-shadow: 0 2px 35px 14px rgba(13,13,13,.04)
+  }
+  .model__title:hover {
+    color: #d7b399
   }
 }
