@@ -1,4 +1,30 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic-ext);
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url(../fonts/icons.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+[class*=_icon-]::before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+._icon-s-vk:before {
+  content: ""
+}
+._icon-s-instagram:before {
+  content: ""
+}
+._icon-s-facebook:before {
+  content: ""
+}
 * {
   padding: 0;
   margin: 0;
@@ -164,6 +190,32 @@ h6 {
   -o-object-fit: contain;
   object-fit: contain
 }
+.logo {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem
+}
+.logo__image {
+  flex: 0 0 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.logo__image img {
+  max-width: 100%;
+  max-height: 2.5rem
+}
+.logo__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2083333333;
+  letter-spacing: .05em;
+  text-transform: uppercase
+}
 .header {
   background-color: #f9f6f1
 }
@@ -177,32 +229,6 @@ h6 {
   -webkit-column-gap: .3125rem;
   -moz-column-gap: .3125rem;
   column-gap: .3125rem
-}
-.header__logo {
-  display: flex;
-  align-items: center;
-  -webkit-column-gap: 1.25rem;
-  -moz-column-gap: 1.25rem;
-  column-gap: 1.25rem
-}
-.header__image {
-  flex: 0 0 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-.header__image img {
-  max-width: 100%;
-  max-height: 2.5rem
-}
-.header__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2083333333;
-  letter-spacing: .05em;
-  text-transform: uppercase
 }
 .cart {
   display: flex;
@@ -329,11 +355,12 @@ h6 {
   flex-wrap: wrap
 }
 .collections__item {
-  flex: 0 1 50%
+  flex: 1 1 50%
 }
 .collection {
   padding: 3.75rem .9375rem 0 1.25rem;
   display: flex;
+  justify-content: space-around;
   -webkit-column-gap: 1.125rem;
   -moz-column-gap: 1.125rem;
   column-gap: 1.125rem
@@ -395,12 +422,14 @@ h6 {
 .new-models__items {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -.9375rem;
-  row-gap: 1.875rem
+  justify-content: space-evenly;
+  row-gap: 1.875rem;
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem
 }
 .new-models__item {
-  flex: 0 1 25%;
-  padding: 0 .9375rem
+  flex: 0 1 15.9375rem
 }
 .new-models__button {
   align-self: center;
