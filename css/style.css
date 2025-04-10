@@ -847,8 +847,21 @@ h6 {
     -moz-column-gap: 0;
     column-gap: 0
   }
+  .menu-footer__list {
+    row-gap: .875rem
+  }
+  .menu-footer__link {
+    font-size: .75rem
+  }
+  .menu-footer__link::before {
+    font-size: .875rem;
+    color: #d7b399
+  }
   .collection__title {
-    font-size: 1.25rem
+    font-size: 1.125rem
+  }
+  .collection__text {
+    font-size: .75rem
   }
 }
 @media (max-width:35.99875em) {
